@@ -4,11 +4,11 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: 'Inter'
-      }
-    },
-    colors: {
-      sun_asterisk: '#FF2200'
+        sans: 'Inter',
+      },
+      colors: {
+        sun_asterisk: '#FF2200',
+      },
     },
   },
   plugins: [],
