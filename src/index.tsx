@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import './assets/css/index.css';
-import Registration from './pages/Registration';
 import reportWebVitals from './reportWebVitals';
+import Registration from './pages/Registration';
+import ThankYou from './pages/ThankYou';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,6 +15,7 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<Registration />} />
+        <Route path='/thank-you' element={<ThankYou />} />
       </Routes>
     </Router>
   </React.StrictMode>
