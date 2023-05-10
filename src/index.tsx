@@ -6,6 +6,7 @@ import './assets/css/index.css';
 import reportWebVitals from './reportWebVitals';
 import Registration from './pages/Registration';
 import ThankYou from './pages/ThankYou';
+import UserInformation from './pages/UserInformation';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -16,6 +17,7 @@ root.render(
       <Routes>
         <Route path='/' element={<Registration />} />
         <Route path='/thank-you' element={<ThankYou />} />
+        <Route path='/user-information' element={<UserInformation />} />
       </Routes>
     </Router>
   </React.StrictMode>
