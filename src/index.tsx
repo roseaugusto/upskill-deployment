@@ -16,8 +16,8 @@ root.render(
     <Router>
       <Routes>
         <Route path='/' element={<Registration />} />
-        <Route path='/thank-you' element={<ThankYou />} />
-        <Route path='/user-information' element={<UserInformation />} />
+        <Route path='/thank-you/:id' element={<ThankYou />} />
+        <Route path='/user-information/:id' element={<UserInformation />} />
       </Routes>
     </Router>
   </React.StrictMode>
