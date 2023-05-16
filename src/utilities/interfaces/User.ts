@@ -1,3 +1,4 @@
+import { QrCode } from './QrCode';
 import { Attachment } from './Attachment';
 
 export interface User {
@@ -7,7 +8,8 @@ export interface User {
   contact: string;
   address: string;
   birthdate: Date;
-  attachments: Attachment[];
+  attachments?: Attachment[];
+  qrCode?: QrCode;
   created_at: Date;
   updated_at: Date;
 }

@@ -16,7 +16,7 @@ import {
 
 const UserInformation: FC = () => {
   const { id } = useParams();
-  const { fetchUser, user, isLoading, isError } = useUser();
+  const { fetchUser, user, qrCode, isLoading, isError } = useUser();
   useEffect(() => {
     if (id) fetchUser(parseInt(id));
   }, [id]);
@@ -39,6 +39,10 @@ const UserInformation: FC = () => {
     popup?.focus();
     popup?.print();
   };
+  const avatarAttachments = user?.attachments?.filter(
+    (attachment) => attachment.type === 'avatar'
+  );
+
   return (
     <Layout>
       <main className='flex items-center flex-col w-full mx-auto max-w-5xl justify-center'>
@@ -52,11 +56,15 @@ const UserInformation: FC = () => {
           ) : (
             <>
               <div className='py-20 px-32 w-full max-w-lg mx-auto'>
-                <img
-                  className='h-52 w-52 mb-6 object-cover rounded shadow-md'
-                  src={user?.attachments[0].url}
-                  alt='Profile Picture'
-                />
+                {avatarAttachments?.map((attachment) => (
+                  <img
+                    key={attachment.id}
+                    className='h-52 w-52 mb-6 object-cover rounded shadow-md'
+                    src={attachment.url}
+                    alt='Profile Picture'
+                  />
+                ))}
+
                 <div className='text-xl font-bold p-1.5'>{user?.name}</div>
                 <div className='flex flex-row p-1.5'>
                   <HomeIcon className='w-6 h-6' />
@@ -85,7 +93,7 @@ const UserInformation: FC = () => {
                   <img
                     id='qr_code'
                     className='h-52 w-52 object-cover rounded shadow-md mb-6'
-                    src={user?.attachments[1].url}
+                    src={`${qrCode}`}
                     alt='QR code'
                   />
                 ) : (
