@@ -15,3 +15,16 @@ To run this project locally,
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
+
+### Deployment
+
+This project can be deployed via Vercel just as how we deployed this for production use. It is the platform for frontend developers, providing the speed and reliability innovators need to create at the moment of inspiration. Every personal account on Vercel is a Hobby account. Hobby accounts are free of charge forever and are for personal, non-commercial use.
+To start deployment,
+
+1. Create an account on Vercel (https://vercel.com/dashboard). Preferably, sign in using your Github account.
+2. Import the project into Vercel.
+3. Vercel will detect that you are using React for this instance and will enable the correct settings for your deployment.
+4. Add the Project Name
+5. Add your environment variables (e.g. REACT_APP_API_ORIGIN)
+6. Click Deploy
+7. Your application is then deployed! (e.g. upskill-fe-lake.vercel.app)
